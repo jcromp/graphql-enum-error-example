@@ -1,0 +1,20 @@
+type Query {
+    foos(fooStatus: [StatusEnum!] = [GOOD, BAD, UGLY]): [Foo]
+    bars: Bar
+}
+
+type Foo {
+    name: String
+    status: StatusEnum
+    bar: Bar
+}
+
+type Bar {
+    name: String
+}
+
+enum StatusEnum {
+    GOOD,
+    BAD,
+    UGLY
+}
